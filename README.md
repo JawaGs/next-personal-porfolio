@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jose Valor — Portfolio
+
+Personal portfolio of **Jose Valor**, Frontend Developer. Built with Next.js 16, React 19, TypeScript and Tailwind CSS v4. Features animated sections, a project showcase and a fully functional contact form that delivers emails via [Resend](https://resend.com).
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Animations | Framer Motion |
+| Icons | React Icons |
+| Email | Resend |
+
+## Sections
+
+- **Hero** — introduction and links to GitHub, LinkedIn and Twitter
+- **About** — bio and skill bars (React, TypeScript, Next.js, Vue.js, Tailwind CSS, CSS/SCSS)
+- **Projects** — showcase of personal projects (React Lab Game, ToDo App, Movie Searcher, Quote Machine, Product List, Cryptocurrencies App)
+- **Contact** — form that sends an email directly to the inbox via the `/api/contact` API route
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Set up environment variables
+
+Create a `.env.local` file in the root of the project:
+
+```
+RESEND_API_KEY=re_your_api_key_here
+```
+
+Get your free API key at [resend.com/api-keys](https://resend.com/api-keys).
+
+### 3. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is deployed on **Vercel**. To deploy your own instance:
 
-## Learn More
+1. Push the repository to GitHub
+2. Import it at [vercel.com/new](https://vercel.com/new)
+3. Add the `RESEND_API_KEY` environment variable in the Vercel dashboard
+4. Click **Deploy**
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- LinkedIn: [linkedin.com/in/jvalor](https://www.linkedin.com/in/jvalor/)
+- GitHub: [github.com/JawaGs](https://github.com/JawaGs)
+- Twitter: [@Jose_A_Valor](https://twitter.com/Jose_A_Valor)
