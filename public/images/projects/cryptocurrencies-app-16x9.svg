@@ -1,0 +1,12 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F2937"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="190" y="125" width="1220" height="650" rx="26" fill="#0B1220" stroke="#22D3EE" stroke-width="2"/>
+  <text x="800" y="430" text-anchor="middle" fill="#67E8F9" font-size="76" font-family="system-ui, -apple-system, Segoe UI, sans-serif">Cryptocurrencies App</text>
+  <text x="800" y="510" text-anchor="middle" fill="#A5F3FC" font-size="34" font-family="system-ui, -apple-system, Segoe UI, sans-serif">Placeholder 16:9</text>
+</svg>

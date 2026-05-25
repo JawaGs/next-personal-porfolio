@@ -2,6 +2,7 @@
 
 import { projects } from "@/data/projects";
 import { FiExternalLink } from "react-icons/fi";
+import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -23,9 +24,19 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="group relative flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-indigo-500/50 hover:bg-white/[0.08] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/10"
             >
-              {/* Top row: emoji + external icon */}
-              <div className="flex items-center justify-between mb-5">
-                <span className="text-4xl">{project.emoji}</span>
+              {/* Project image */}
+              <div className="relative mb-5 overflow-hidden rounded-xl border border-white/10 aspect-video">
+                <Image
+                  src={project.imageSrc}
+                  alt={`${project.title} preview`}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+              </div>
+
+              <div className="flex items-center justify-end mb-3">
                 <FiExternalLink className="text-slate-500 group-hover:text-indigo-400 transition-colors text-xl" />
               </div>
 
