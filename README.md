@@ -17,7 +17,7 @@ Personal portfolio of **Jose Valor**, Frontend Developer. Built with Next.js 16,
 
 - **Hero** — introduction and links to GitHub, LinkedIn and Twitter
 - **About** — bio and skill bars (React, TypeScript, Next.js, Vue.js, Tailwind CSS, CSS/SCSS)
-- **Projects** — showcase of personal projects (Cowork Reservation App, React Lab Game, ToDo App, Movie Searcher, Quote Machine, Cryptocurrencies App)
+- **Projects** — showcase of selected projects (Cowork Reservation App)
 - **Contact** — form that sends an email directly to the inbox via the `/api/contact` API route
 
 ## Getting Started

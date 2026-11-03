@@ -19,4 +19,10 @@ describe('projects data', () => {
       expect(project.tech.length).toBeGreaterThan(0);
     });
   });
+
+  it('does not link to the retired now.sh domain', () => {
+    projects.forEach((project) => {
+      expect(project.url).not.toMatch(/\.now\.sh/);
+    });
+  });
 });
