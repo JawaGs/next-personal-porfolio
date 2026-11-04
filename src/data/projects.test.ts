@@ -25,4 +25,11 @@ describe('projects data', () => {
       expect(project.url).not.toMatch(/\.now\.sh/);
     });
   });
+
+  it('has unique titles and urls', () => {
+    const titles = projects.map((p) => p.title);
+    const urls = projects.map((p) => p.url);
+    expect(new Set(titles).size).toBe(titles.length);
+    expect(new Set(urls).size).toBe(urls.length);
+  });
 });

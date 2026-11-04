@@ -15,4 +15,12 @@ export const projects: Project[] = [
     url: "https://cowork-reservation-app.vercel.app/",
     imageSrc: "/images/projects/cowork-reservation-app-16x9.svg",
   },
+  {
+    title: "Accessible Seat Map",
+    description:
+      "Airline seat selection fully operable by keyboard and screen reader: ARIA grid with roving tabindex, occupied seats kept focusable and announced, native <dialog> exit-row confirmation with focus return, and multi-passenger state in a shareable URL. 219 unit and component tests plus Playwright E2E with zero axe violations.",
+    tech: ["Next.js 16", "TypeScript", "Tailwind v4", "Vitest", "Playwright", "axe-core"],
+    url: "https://seat-map-chi.vercel.app/",
+    imageSrc: "/images/projects/accessible-seat-map-16x9.svg",
+  },
 ];
