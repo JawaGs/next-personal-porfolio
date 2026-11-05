@@ -23,4 +23,12 @@ export const projects: Project[] = [
     url: "https://seat-map-chi.vercel.app/",
     imageSrc: "/images/projects/accessible-seat-map-16x9.svg",
   },
+  {
+    title: "Strangler Fig Migration",
+    description:
+      "Route-by-route migration of a legacy jQuery storefront to Next.js with no big-bang rewrite: a routing proxy serves either version under the same URL, with per-route canary percentages, sticky bucket cookies, manual version override and a live /migration-status panel. Covered by 50 unit tests plus Playwright E2E against production.",
+    tech: ["Next.js 16", "TypeScript", "Tailwind v4", "jQuery", "Vitest", "Playwright"],
+    url: "https://jawagsac.vercel.app/",
+    imageSrc: "/images/projects/strangler-fig-migration-16x9.svg",
+  },
 ];
