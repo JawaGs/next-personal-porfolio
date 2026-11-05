@@ -1,8 +1,9 @@
-"use client";
-
 import { projects } from "@/data/projects";
-import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import Image from "next/image";
+
+const linkClassName =
+  "inline-flex items-center gap-2 text-sm font-medium text-indigo-300 hover:text-white underline-offset-2 hover:underline transition-colors";
 
 export default function Projects() {
   return (
@@ -10,40 +11,29 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto">
         {/* Section heading */}
         <div className="flex items-center gap-4 mb-16">
-          <span className="text-indigo-400 font-mono text-sm">02.</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white">Projects</h2>
           <div className="flex-1 h-px bg-white/10" />
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
-            <a
+            <article
               key={project.title}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-indigo-500/50 hover:bg-white/[0.08] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/10"
+              className="flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-indigo-500/50 transition-colors duration-300"
             >
-              {/* Project image */}
+              {/* Project image (decorative: the title is right next to it) */}
               <div className="relative mb-5 overflow-hidden rounded-xl border border-white/10 aspect-video">
                 <Image
                   src={project.imageSrc}
-                  alt={`${project.title} preview`}
+                  alt=""
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover"
                   sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-              </div>
-
-              <div className="flex items-center justify-end mb-3">
-                <FiExternalLink className="text-slate-500 group-hover:text-indigo-400 transition-colors text-xl" />
               </div>
 
               {/* Title */}
-              <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-indigo-300 transition-colors">
-                {project.title}
-              </h3>
+              <h3 className="text-white font-semibold text-lg mb-2">{project.title}</h3>
 
               {/* Description */}
               <p className="text-slate-400 text-sm leading-relaxed flex-1 mb-5">
@@ -51,7 +41,7 @@ export default function Projects() {
               </p>
 
               {/* Tech stack badges */}
-              <div className="flex flex-wrap gap-2 mt-auto">
+              <div className="flex flex-wrap gap-2 mb-5">
                 {project.tech.map((t) => (
                   <span
                     key={t}
@@ -61,7 +51,31 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-            </a>
+
+              {/* Links */}
+              <div className="flex flex-wrap gap-6">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={linkClassName}
+                >
+                  <FiExternalLink aria-hidden="true" />
+                  <span aria-hidden="true">Live demo</span>
+                  <span className="sr-only">Live demo: {project.title} (opens in a new tab)</span>
+                </a>
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={linkClassName}
+                >
+                  <FiGithub aria-hidden="true" />
+                  <span aria-hidden="true">Code</span>
+                  <span className="sr-only">Code: {project.title} (opens in a new tab)</span>
+                </a>
+              </div>
+            </article>
           ))}
         </div>
       </div>

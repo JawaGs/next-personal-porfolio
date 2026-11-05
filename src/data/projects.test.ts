@@ -20,6 +20,12 @@ describe('projects data', () => {
     });
   });
 
+  it('links each project to its GitHub repository', () => {
+    projects.forEach((project) => {
+      expect(project.repoUrl).toMatch(/^https:\/\/github\.com\/JawaGs\/[\w.-]+$/);
+    });
+  });
+
   it('does not link to the retired now.sh domain', () => {
     projects.forEach((project) => {
       expect(project.url).not.toMatch(/\.now\.sh/);

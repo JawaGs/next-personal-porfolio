@@ -1,6 +1,6 @@
 # Jose Valor — Portfolio
 
-Personal portfolio of **Jose Valor**, Frontend Developer. Built with Next.js 16, React 19, TypeScript and Tailwind CSS v4. Features animated sections, a project showcase and a fully functional contact form that delivers emails via [Resend](https://resend.com).
+Personal portfolio of **Jose Valor**, Senior Frontend Engineer. Built with Next.js 16, React 19, TypeScript and Tailwind CSS v4. Features animated sections, a project showcase and a fully functional contact form that delivers emails via [Resend](https://resend.com).
 
 ## Tech Stack
 
@@ -9,15 +9,15 @@ Personal portfolio of **Jose Valor**, Frontend Developer. Built with Next.js 16,
 | Framework | Next.js 16 (App Router) |
 | Language | TypeScript |
 | Styling | Tailwind CSS v4 |
-| Animations | Framer Motion |
 | Icons | React Icons |
 | Email | Resend |
 
 ## Sections
 
-- **Hero** — introduction and links to GitHub, LinkedIn and Twitter
-- **About** — bio and skill bars (React, TypeScript, Next.js, Vue.js, Tailwind CSS, CSS/SCSS)
-- **Projects** — showcase of selected projects (Cowork Reservation App, Accessible Seat Map, Strangler Fig Migration)
+- **Hero** — introduction and links to GitHub and LinkedIn
+- **Projects** — showcase of selected projects (Cowork Reservation App, Accessible Seat Map, Strangler Fig Migration), each with a live demo and code link
+- **Experience** — work history, newest first
+- **About** — bio and grouped skills
 - **Contact** — form that sends an email directly to the inbox via the `/api/contact` API route
 
 ## Getting Started
@@ -57,6 +57,5 @@ This project is deployed on **Vercel**. To deploy your own instance:
 
 ## Contact
 
-- LinkedIn: [linkedin.com/in/jvalor](https://www.linkedin.com/in/jvalor/)
+- LinkedIn: [linkedin.com/in/josealfredovalor](https://www.linkedin.com/in/josealfredovalor/)
 - GitHub: [github.com/JawaGs](https://github.com/JawaGs)
-- Twitter: [@Jose_A_Valor](https://twitter.com/Jose_A_Valor)
