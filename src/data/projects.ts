@@ -26,9 +26,9 @@ export const projects: Project[] = [
   {
     title: "Strangler Fig Migration",
     description:
-      "Route-by-route migration of a legacy jQuery storefront to Next.js with no big-bang rewrite: a routing proxy serves either version under the same URL, with per-route canary percentages, sticky bucket cookies, manual version override and a live /migration-status panel. Covered by 50 unit tests plus Playwright E2E against production.",
+      "Legacy jQuery storefront migrated to Next.js one route at a time: a proxy in front of both origins routes each request by per-route rollout, with sticky percentage buckets, a QA override and rollback in minutes. Live banner and status panel show which version served each page. Unit and Playwright E2E tests, also run against production.",
     tech: ["Next.js 16", "TypeScript", "Tailwind v4", "jQuery", "Vitest", "Playwright"],
-    url: "https://jawagsac.vercel.app/",
+    url: "https://jawagsac.vercel.app/migration-status",
     imageSrc: "/images/projects/strangler-fig-migration-16x9.svg",
   },
 ];
