@@ -3,18 +3,18 @@ import { experience } from "@/data/experience";
 export default function Experience() {
   return (
     <section id="experience" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Section heading */}
-        <div className="flex items-center gap-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">Experience</h2>
-          <div className="flex-1 h-px bg-white/10" />
+        <div className="flex items-center gap-4 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-text">Experience</h2>
+          <div className="flex-1 h-px bg-border" />
         </div>
 
-        <ol className="space-y-12">
+        <ol className="max-w-3xl space-y-12">
           {experience.map((entry) => (
             <li key={`${entry.company}-${entry.start.dateTime}`}>
-              <h3 className="text-white font-semibold text-lg">{entry.title}</h3>
-              <p className="text-slate-300 text-sm mt-1">
+              <h3 className="text-text font-semibold text-lg">{entry.title}</h3>
+              <p className="text-text-muted text-sm mt-1">
                 {entry.company} ·{" "}
                 <time dateTime={entry.start.dateTime}>{entry.start.label}</time> –{" "}
                 {entry.end ? (
@@ -24,9 +24,9 @@ export default function Experience() {
                 )}
               </p>
               {entry.context && (
-                <p className="text-slate-400 text-sm mt-1">{entry.context}</p>
+                <p className="text-text-muted text-sm mt-1">{entry.context}</p>
               )}
-              <ul className="list-disc pl-5 mt-4 space-y-2 text-slate-400 text-sm leading-relaxed">
+              <ul className="list-disc pl-5 mt-4 space-y-2 text-text-muted text-sm leading-relaxed">
                 {entry.highlights.map((highlight) => (
                   <li key={highlight}>{highlight}</li>
                 ))}

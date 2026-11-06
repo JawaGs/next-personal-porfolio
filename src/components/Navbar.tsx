@@ -22,18 +22,18 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "bg-[#0f0f13]/90 backdrop-blur-md border-b border-white/10 shadow-lg"
-          : "bg-transparent"
+          ? "bg-bg/90 backdrop-blur-md border-border shadow-lg"
+          : "bg-transparent border-transparent"
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="max-w-6xl mx-auto px-6 min-[1200px]:px-0 py-4 flex items-center justify-between">
         <Link
           href="#hero"
-          className="text-xl font-bold text-white tracking-tight hover:text-indigo-400 transition-colors"
+          className="text-xl font-bold text-text tracking-tight hover:text-accent transition-colors"
         >
-          JV<span className="text-indigo-500">.</span>
+          JV<span className="text-accent">.</span>
         </Link>
 
         {/* Desktop */}
@@ -42,7 +42,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-slate-300 hover:text-indigo-400 transition-colors text-sm font-medium tracking-wide uppercase"
+                className="text-text-muted hover:text-accent transition-colors text-sm font-medium"
               >
                 {link.label}
               </a>
@@ -52,7 +52,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-slate-300 hover:text-white transition-colors"
+          className="md:hidden text-text-muted hover:text-text transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -64,13 +64,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0f0f13]/95 backdrop-blur-md border-t border-white/10 px-6 py-4">
+        <div className="md:hidden bg-bg/95 backdrop-blur-md border-t border-border px-6 py-4">
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-slate-300 hover:text-indigo-400 transition-colors text-sm font-medium uppercase tracking-wide"
+                  className="text-text-muted hover:text-accent transition-colors text-sm font-medium"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}

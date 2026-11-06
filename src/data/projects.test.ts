@@ -7,7 +7,7 @@ describe('projects data', () => {
 
   it('uses 16:9 preview image paths for every project', () => {
     projects.forEach((project) => {
-      expect(project.imageSrc).toMatch(/^\/images\/projects\/.+-16x9\.svg$/);
+      expect(project.imageSrc).toMatch(/^\/images\/projects\/.+-16x9\.png$/);
     });
   });
 

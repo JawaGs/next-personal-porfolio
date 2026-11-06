@@ -3,26 +3,26 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 import Image from "next/image";
 
 const linkClassName =
-  "inline-flex items-center gap-2 text-sm font-medium text-indigo-300 hover:text-white underline-offset-2 hover:underline transition-colors";
+  "inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-text underline-offset-2 hover:underline transition-colors";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6 bg-white/[0.02]">
+    <section id="projects" className="pt-10 pb-20 px-6 bg-surface">
       <div className="max-w-6xl mx-auto">
         {/* Section heading */}
-        <div className="flex items-center gap-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">Projects</h2>
-          <div className="flex-1 h-px bg-white/10" />
+        <div className="flex items-center gap-4 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-text">Projects</h2>
+          <div className="flex-1 h-px bg-border" />
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-indigo-500/50 transition-colors duration-300"
+              className="flex flex-col bg-surface-raised border border-border rounded-sm p-6 hover:border-accent transition-colors duration-300"
             >
               {/* Project image (decorative: the title is right next to it) */}
-              <div className="relative mb-5 overflow-hidden rounded-xl border border-white/10 aspect-video">
+              <div className="relative mb-5 overflow-hidden rounded-sm border border-border aspect-video">
                 <Image
                   src={project.imageSrc}
                   alt=""
@@ -33,10 +33,10 @@ export default function Projects() {
               </div>
 
               {/* Title */}
-              <h3 className="text-white font-semibold text-lg mb-2">{project.title}</h3>
+              <h3 className="text-text font-semibold text-lg mb-2">{project.title}</h3>
 
               {/* Description */}
-              <p className="text-slate-400 text-sm leading-relaxed flex-1 mb-5">
+              <p className="text-text-muted text-sm leading-relaxed flex-1 mb-5">
                 {project.description}
               </p>
 
@@ -45,7 +45,7 @@ export default function Projects() {
                 {project.tech.map((t) => (
                   <span
                     key={t}
-                    className="text-xs font-mono px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20"
+                    className="text-xs px-2 py-0.5 rounded-sm bg-accent/10 text-accent border border-accent/40"
                   >
                     {t}
                   </span>

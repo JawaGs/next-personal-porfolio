@@ -15,7 +15,7 @@ export const projects: Project[] = [
     tech: ["Next.js 16", "TypeScript", "Tailwind v4", "Vitest", "Playwright"],
     url: "https://cowork-reservation-app.vercel.app/",
     repoUrl: "https://github.com/JawaGs/cowork-reservation-app",
-    imageSrc: "/images/projects/cowork-reservation-app-16x9.svg",
+    imageSrc: "/images/projects/cowork-reservation-app-16x9.png",
   },
   {
     title: "Accessible Seat Map",
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     tech: ["Next.js 16", "TypeScript", "Tailwind v4", "Vitest", "Playwright", "axe-core"],
     url: "https://seat-map-chi.vercel.app/",
     repoUrl: "https://github.com/JawaGs/seat-map",
-    imageSrc: "/images/projects/accessible-seat-map-16x9.svg",
+    imageSrc: "/images/projects/accessible-seat-map-16x9.png",
   },
   {
     title: "Strangler Fig Migration",
@@ -33,6 +33,6 @@ export const projects: Project[] = [
     tech: ["Next.js 16", "TypeScript", "Tailwind v4", "jQuery", "Vitest", "Playwright"],
     url: "https://jawagsac.vercel.app/migration-status",
     repoUrl: "https://github.com/JawaGs/strangler-migration",
-    imageSrc: "/images/projects/strangler-fig-migration-16x9.svg",
+    imageSrc: "/images/projects/strangler-fig-migration-16x9.png",
   },
 ];

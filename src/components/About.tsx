@@ -8,16 +8,16 @@ const skillGroups = [
 export default function About() {
   return (
     <section id="about" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Section heading */}
-        <div className="flex items-center gap-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">About</h2>
-          <div className="flex-1 h-px bg-white/10" />
+        <div className="flex items-center gap-4 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-text">About</h2>
+          <div className="flex-1 h-px bg-border" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Text */}
-          <div className="space-y-4 text-slate-400 leading-relaxed">
+          <div className="space-y-4 text-text-muted leading-relaxed">
             <p>
               I&apos;m a frontend engineer based in Santiago, Chile, building
               production web apps since 2017: freelance first, then for financial
@@ -34,8 +34,8 @@ export default function About() {
           <dl className="space-y-4 text-sm">
             {skillGroups.map((group) => (
               <div key={group.label} className="flex gap-3">
-                <dt className="w-20 shrink-0 text-white font-semibold">{group.label}</dt>
-                <dd className="text-slate-400">{group.skills}</dd>
+                <dt className="w-20 shrink-0 text-text font-semibold">{group.label}</dt>
+                <dd className="text-text-muted">{group.skills}</dd>
               </div>
             ))}
           </dl>
