@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
 import { Atkinson_Hyperlegible_Next, Fraunces } from "next/font/google";
+import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
   display: "swap",
-  style: ["normal", "italic"],
   axes: ["SOFT", "WONK", "opsz"],
   variable: "--font-fraunces",
+});
+
+// Only used for the role in the hero, so it isn't worth preloading.
+const frauncesItalic = Fraunces({
+  subsets: ["latin"],
+  display: "swap",
+  style: "italic",
+  axes: ["opsz"],
+  preload: false,
+  variable: "--font-fraunces-italic",
 });
 
 const atkinson = Atkinson_Hyperlegible_Next({
@@ -40,8 +50,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${atkinson.variable} h-full antialiased`}
+      suppressHydrationWarning
+      className={`${fraunces.variable} ${frauncesItalic.variable} ${atkinson.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-full flex flex-col bg-bg text-text font-sans">{children}</body>
     </html>
   );

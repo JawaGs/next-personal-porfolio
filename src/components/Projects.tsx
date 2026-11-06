@@ -16,7 +16,7 @@ export default function Projects() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <article
               key={project.title}
               className="flex flex-col bg-surface-raised border border-border rounded-sm p-6 hover:border-accent transition-colors duration-300"
@@ -27,6 +27,7 @@ export default function Projects() {
                   src={project.imageSrc}
                   alt=""
                   fill
+                  preload={index === 0}
                   className="object-cover"
                   sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
                 />

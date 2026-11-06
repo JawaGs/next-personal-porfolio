@@ -46,6 +46,14 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+### 4. Run the tests
+
+```bash
+npm run test
+npx playwright install chromium   # first time only
+npm run test:e2e
+```
+
 ## Deployment
 
 This project is deployed on **Vercel**. To deploy your own instance:

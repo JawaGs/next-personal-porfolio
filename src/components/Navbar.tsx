@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "Projects", href: "#projects" },
@@ -36,30 +37,34 @@ export default function Navbar() {
           JV<span className="text-accent">.</span>
         </Link>
 
-        {/* Desktop */}
-        <ul className="hidden md:flex gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-text-muted hover:text-accent transition-colors text-sm font-medium"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-2 md:gap-6">
+          {/* Desktop */}
+          <ul className="hidden md:flex gap-8">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="text-text-muted hover:text-accent transition-colors text-sm font-medium"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-text-muted hover:text-text transition-colors"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className="block w-5 h-0.5 bg-current mb-1 transition-all" />
-          <span className="block w-5 h-0.5 bg-current mb-1 transition-all" />
-          <span className="block w-5 h-0.5 bg-current transition-all" />
-        </button>
+          <ThemeToggle />
+
+          {/* Mobile toggle */}
+          <button
+            className="md:hidden text-text-muted hover:text-text transition-colors"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className="block w-5 h-0.5 bg-current mb-1 transition-all" />
+            <span className="block w-5 h-0.5 bg-current mb-1 transition-all" />
+            <span className="block w-5 h-0.5 bg-current transition-all" />
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}

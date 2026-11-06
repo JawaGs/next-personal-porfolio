@@ -13,7 +13,7 @@ export default function Hero() {
         </h1>
 
         {/* Role */}
-        <p className="mt-3 text-2xl md:text-3xl text-accent font-display italic motion-safe:animate-[fadeInDown_0.6s_ease_0.2s_both]">
+        <p className="mt-3 text-2xl md:text-3xl text-accent font-display-italic italic motion-safe:animate-[fadeInDown_0.6s_ease_0.2s_both]">
           Senior Frontend Engineer
         </p>
 
