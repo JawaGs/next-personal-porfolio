@@ -56,7 +56,7 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      aria-label="Toggle color theme"
+      aria-label="Dark theme"
       aria-pressed={theme === null ? undefined : theme === "dark"}
       title={theme === null ? undefined : `Switch to ${nextTheme} theme`}
       className="flex h-11 w-11 items-center justify-center text-xl text-text-muted hover:text-accent transition-colors"

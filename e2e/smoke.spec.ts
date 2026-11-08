@@ -3,7 +3,7 @@ import { experience } from '../src/data/experience';
 import { projects } from '../src/data/projects';
 
 const toggle = (page: import('@playwright/test').Page) =>
-  page.getByRole('button', { name: 'Toggle color theme' });
+  page.getByRole('button', { name: 'Dark theme', exact: true });
 const theme = (page: import('@playwright/test').Page) =>
   page.evaluate(() => document.documentElement.dataset.theme);
 

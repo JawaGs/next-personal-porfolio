@@ -22,8 +22,8 @@ export default function Hero() {
           I build accessible, high-traffic booking and e-commerce frontends with
           React, Next.js and TypeScript. I&apos;ve worked on moving a major
           European airline&apos;s booking traffic to Next.js and led the
-          web-to-mobile migration of a financial services flow generating 80% of
-          its sales.
+          web-to-mobile migration of the flow generating 80% of a financial
+          services company&apos;s sales.
         </p>
 
         {/* CTAs and social icons */}
