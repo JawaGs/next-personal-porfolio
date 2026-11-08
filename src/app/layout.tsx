@@ -31,7 +31,7 @@ const description =
   "Senior frontend engineer building accessible, high-traffic booking and e-commerce frontends with React, Next.js and TypeScript.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://next-personal-porfolio.vercel.app"),
+  metadataBase: new URL("https://jose-valor.vercel.app"),
   title,
   description,
   openGraph: {
