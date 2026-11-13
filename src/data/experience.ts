@@ -36,7 +36,7 @@ export const experience: Experience[] = [
     end: { dateTime: "2024-01", label: "Jan 2024" },
     highlights: [
       "Led the migration of the flow generating 80% of the company's sales from web to a React Native microfrontend inside the main native app, including native bridge integration.",
-      "Built a shared component system that cut style-related deployment bugs by over 90%; co-designed an orchestration layer that improved flow performance by 60%.",
+      "Built a shared component system that cut style-related deployment bugs by over 90%; defined each screen's data needs to split an over-fetching BFF into screen-specific endpoints, cutting first-load response times by 60%.",
       "Biometric authentication and digital signing with Chile's national digital ID (Clave Única); releases on the App Store, Google Play and Huawei AppGallery.",
     ],
   },
