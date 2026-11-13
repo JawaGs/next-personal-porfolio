@@ -24,7 +24,7 @@ export const experience: Experience[] = [
     end: null,
     highlights: [
       "Worked on migrating the airline's website to Next.js, moving 100% of booking-flow traffic from the legacy site to the new platform.",
-      "Built flight selection, booking and cabin-upsell flows, plus cookie-based experimentation infrastructure for A/B testing across the booking funnel.",
+      "Built flight selection, booking and cabin-upsell flows, plus A/B experiments across the booking funnel.",
       "AEM content fragments driving dynamic layouts · TypeScript + Vitest · CI/CD with GitHub Actions and ArgoCD.",
     ],
   },
